@@ -23,10 +23,10 @@ exports.up = function(knex) {
 
         .createTable('for-sale', tbl => {
             //
-            tbl.increments('item_id').primary;
-            tbl.text('item-name', 128).notNullable();
+            tbl.increments();
+            tbl.text('item', 128).notNullable();
             tbl.text('category', 128).notNullable();
-            tbl.text('price', 128).notNullable();
+            tbl.integer('price', 128).notNullable();
             tbl.text('location', 128).notNullable();
             tbl.text('description', 128).notNullable()
             tbl.integer('business_id', 128)
