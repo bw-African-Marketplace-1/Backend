@@ -1,8 +1,5 @@
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('for-sale').truncate()
-    .then(function () {
-      // Inserts seed entries
       return knex('for-sale').insert([
         {
           item: 'Wells made of bricks',
@@ -21,5 +18,5 @@ exports.seed = function(knex) {
           business_id: 2
         }
       ]);
-    });
+    
 };
