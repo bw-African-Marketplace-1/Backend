@@ -3,7 +3,7 @@ exports.seed = function(knex) {
   // Deletes ALL existing entries
       return knex('for-sale').insert([
         {
-          item: 'Wells made of bricks',
+          name: 'Wells made of bricks',
           category: 'Resources',
           price: '$200.00',
           location: 'Alexandria, Egypt',
@@ -11,7 +11,7 @@ exports.seed = function(knex) {
           business_id: 1
         },
         {
-          item: 'Chicken',
+          name: 'Chicken',
           category: 'Livestock',
           price: '$10.00',
           location: 'Mexico',
