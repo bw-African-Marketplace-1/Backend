@@ -1,3 +1,4 @@
+
 exports.seed = function(knex) {
   // Deletes ALL existing entries
       return knex('for-sale').insert([
@@ -18,5 +19,4 @@ exports.seed = function(knex) {
           business_id: 2
         }
       ]);
-    
-};
+    };
