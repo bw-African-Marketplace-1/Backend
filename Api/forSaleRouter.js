@@ -4,7 +4,7 @@ const restricted = require('../Auth/restricted-middleware.js');
 
 const router = express.Router();
 
-router.get('/', (req,res) => {
+router.get('/', restricted, (req,res) => {
     db('for-sale')
     .then(data => {
         res.json(data);
