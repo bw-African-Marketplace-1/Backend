@@ -27,16 +27,10 @@ module.exports = {
   },
 
   production: {
-    client: "pg",
-    connection: process.env.DATABASE_URL,
-    pool: {
-      min: 2,
-      max: 100
-    },
-    migrations: {
-      directory: "./database/migrations",
-      tableName: "dbmigrations"
-    },
-    seeds: { directory: "./database/seeds" }
+    client: 'pg ',
+    connection: { filename: './database/auth.db3' },
+    useNullAsDefault: true,
+    migrations: { directory: './database/migrations' },
+    seeds: { directory: './database/seeds' }
   }
 };
